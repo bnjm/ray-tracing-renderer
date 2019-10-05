@@ -19,7 +19,8 @@ export function RayTracingRenderer(params = {}) {
     stencil: false,
     antialias: false,
     powerPreference: 'high-performance',
-    failIfMajorPerformanceCaveat: true
+    failIfMajorPerformanceCaveat: true,
+    preserveDrawingBuffer: params.preserveDrawingBuffer || false
   });
 
   loadExtensions(gl, glRequiredExtensions);
